@@ -12,59 +12,70 @@
       href="./assets/images/favicon-32x32.png"
     />
 
-    <title>
-      Frontend Mentor | Newsletter sign-up form with success message
-    </title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <title>Newsletter sign-up form with success message</title>
   </head>
-  <body>
-    <main>
-      <article>
-        <picture>
+  <body class="page">
+    <main class="page__main">
+      <article class="subscribe">
+        <picture class="subscribe__image-container">
           <source
             srcset="./assets/images/illustration-sign-up-desktop.svg"
-            media="min-width: 37.5rem"
+            media="(min-width: 37.5rem)"
+            class="subscribe__image subscribe__image--desktop"
           />
-          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" />
+          <img
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt="Sign up illustration"
+            class="subscribe__image subscribe__image--mobile"
+          />
         </picture>
-        <section>
-          <form>
-            <h1>Stay updated!</h1>
-            <p>Join 60,000+ product managers receiving monthly updates on:</p>
-            <ul>
-              <li>Product discovery and building what matters</li>
-              <li>Measuring to ensure updates are a success</li>
-              <li>And much more!</li>
+        <section class="subscribe__form-container">
+          <form class="subscribe__form">
+            <h1 class="subscribe__form-title">Stay updated!</h1>
+            <p class="subscribe__form-description">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <ul class="subscribe__form-list">
+              <li class="subscribe__form-list-item">
+                Product discovery and building what matters
+              </li>
+              <li class="subscribe__form-list-item">
+                Measuring to ensure updates are a success
+              </li>
+              <li class="subscribe__form-list-item">And much more!</li>
             </ul>
-            <div>
-              <label for="email">Email address</label>
-              <input id="email" type="email" placeholder="email@company.com" />
+            <div class="subscribe__form-input-group">
+              <label for="email" class="subscribe__form-label"
+                >Email address</label
+              >
+              <input
+                id="email"
+                type="email"
+                class="subscribe__form-input"
+                placeholder="email@company.com"
+              />
             </div>
-            <button type="submit">Subscribe to monthly newsletter</button>
+            <button
+              type="submit"
+              class="subscribe__form-button subscribe__form-button--submit"
+            >
+              Subscribe to monthly newsletter
+            </button>
           </form>
         </section>
-        <section>
+        <section class="subscribe__success subscribe__success--hidden">
           <img
             src="./assets/images/icon-success.svg"
-            alt="Successful subscription"
+            alt="Success icon"
+            class="subscribe__success-icon"
           />
-          <h1>Thanks for subscribing!</h1>
-          <p>
+          <h1 class="subscribe__success-title">Thanks for subscribing!</h1>
+          <p class="subscribe__success-message">
             A confirmation email has been sent to
             <strong>ash@loremcompany.com</strong>. Please open it and click the
             button inside to confirm your subscription.
           </p>
-          <button>Dismiss message</button>
+          <button class="subscribe__success-dismiss">Dismiss message</button>
         </section>
       </article>
     </main>
