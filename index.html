@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
+    <link rel="stylesheet" href="./index.css" />
+
     <link
+      rel
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
+      href="./assets/images/icon-success.svg"
     />
 
     <title>Newsletter sign-up form with success message</title>
@@ -30,20 +33,21 @@
           />
         </picture>
         <section class="subscribe__form-container">
+          <h1 class="subscribe__title">Stay updated!</h1>
+          <p class="subscribe__description">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul class="subscribe__list">
+            <li class="subscribe__list-item">
+              Product discovery and building what matters
+            </li>
+            <li class="subscribe__list-item">
+              Measuring to ensure updates are a success
+            </li>
+            <li class="subscribe__list-item">And much more!</li>
+          </ul>
+
           <form class="subscribe__form">
-            <h1 class="subscribe__form-title">Stay updated!</h1>
-            <p class="subscribe__form-description">
-              Join 60,000+ product managers receiving monthly updates on:
-            </p>
-            <ul class="subscribe__form-list">
-              <li class="subscribe__form-list-item">
-                Product discovery and building what matters
-              </li>
-              <li class="subscribe__form-list-item">
-                Measuring to ensure updates are a success
-              </li>
-              <li class="subscribe__form-list-item">And much more!</li>
-            </ul>
             <div class="subscribe__form-input-group">
               <label for="email" class="subscribe__form-label"
                 >Email address</label
