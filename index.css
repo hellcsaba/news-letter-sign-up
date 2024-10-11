@@ -9,6 +9,8 @@
     --color-charcoal-grey: hsl(235, 18%, 26%);
     --color-grey: hsl(231, 7%, 60%);
     --color-white: hsl(0, 0%, 100%);
+
+    --color-grey-opacity-75: hsla(231, 7%, 60%, 0.75);
 }
 
 *, *::before, *::after {
@@ -30,6 +32,16 @@
     justify-content: center;
 }
 
+.subscribe__image-container {
+    width: 100%;
+    height: 100%;
+}
+
+.subscribe__image {
+    width: 100%;
+    height: 100%;
+}
+
 .subscribe__form-container {
     padding: 1.5rem;
     display: flex;
@@ -48,7 +60,7 @@
 
 .subscribe__list-item {
     margin-block: 0.75rem;
-    padding-inline-start: 0.75rem;
+    padding-inline-start: 0.5rem;
     position: relative;
 }
 
@@ -72,14 +84,18 @@
 
 .subscribe__form-label {
     font-weight: 700;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
 }
 
 .subscribe__form-input {
     border-radius: 0.5rem;
-    border: 1px solid var(--color-grey);
+    border: 1px solid var(--color-grey-opacity-75);
     padding: 1rem;
-    font-size: 1rem;
+    font-size: 0.875rem;
+}
+
+.subscribe__form-input::placeholder {
+    color: var(--color-grey-opacity-75);
 }
 
 .subscribe__form-button {
@@ -95,4 +111,58 @@
 
 .subscribe__success--hidden {
     display: none;
+}
+
+@media (min-width: 37.5rem) {
+    .page {
+        background-color: var(--color-charcoal-grey);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-size: 0.9375rem;
+        font-weight: 500;
+    }
+
+    .page__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .subscribe{
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: var(--color-white);
+        max-width: 50rem;
+        border-radius: 2rem;
+    }
+
+    .subscribe__image-container {
+        width: 50%;
+        height: 100%;
+        padding: 1.5rem 1.5rem 1.5rem 0;
+        flex: 1;
+    }
+
+    .subscribe__image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .subscribe__form-container {
+        padding: 0 3.5rem;
+        row-gap: 1rem;
+        flex: 1;
+    }
+
+    .subscribe__title {
+        font-size: 3rem;
+    }
+
+    .subscribe__form-button {
+        font-size: 0.875rem;
+    }
+    
 }
