@@ -2,8 +2,9 @@
 
 :root {
     /* Primary */
-    --color-tomato: hsl(4, 100%, 67%);
-  
+    --color-tomato: hsl(12, 100%, 67%);
+    --color-tomato-light: hsl(4, 98%, 60%);
+
     /* Neutrals */
     --color-dark-slate-grey: hsl(234, 29%, 20%);
     --color-charcoal-grey: hsl(235, 18%, 26%);
@@ -11,6 +12,7 @@
     --color-white: hsl(0, 0%, 100%);
 
     --color-grey-opacity-75: hsla(231, 7%, 60%, 0.75);
+
 }
 
 *, *::before, *::after {
@@ -109,8 +111,65 @@
     border: none;
 }
 
+.subscribe__form-button:hover, .subscribe__form-button:focus, .subscribe__form-button:active {
+    cursor: pointer;
+    background: linear-gradient(90deg, var(--color-tomato-light), var(--color-tomato));
+    box-shadow: 0 0.75rem 2.5rem rgba(255, 99, 71, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.subscribe__success {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 1.5rem;
+    margin: 0 auto;
+}
+
 .subscribe__success--hidden {
     display: none;
+}
+
+.subscribe__success-title {
+    font-size: 2.25rem;
+    margin-block-end: 1rem;
+}
+
+.subscribe__success-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-block: 6rem 2rem;
+}
+
+.subscribe__success-message {
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.subscribe__success-message strong {
+    color: var(--color-dark-slate-grey);
+}
+
+.subscribe__success-dismiss {
+width: calc(100vw - 3rem); /* Width of the screen minus the subscribe-success padding */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-dark-slate-grey);
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    border: none;
+    position: absolute;
+    bottom: 1.5rem;
+}
+
+.subscribe__success-dismiss:hover, .subscribe__success-dismiss:focus,
+.subscribe__success-dismiss:active {
+    cursor: pointer;
+    background: linear-gradient(90deg, var(--color-tomato-light), var(--color-tomato));
+    box-shadow: 0 0.75rem 2.5rem rgba(255, 99, 71, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 @media (min-width: 37.5rem) {
@@ -164,5 +223,5 @@
     .subscribe__form-button {
         font-size: 0.875rem;
     }
-    
+
 }
