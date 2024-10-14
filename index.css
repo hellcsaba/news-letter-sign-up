@@ -79,9 +79,9 @@
 
 .subscribe__form-input-group {
     display: flex;
-    flex-direction: column;
-    padding: 1.5rem 0 1.25rem 0;
-    row-gap: 0.5rem;
+    padding: 1rem 0 0.5rem 0;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .subscribe__form-label {
@@ -89,12 +89,26 @@
     font-size: 0.75rem;
 }
 
+.subscribe__form-error-message {
+    color: var(--color-tomato);
+    font-weight: 700;
+    font-size: 0.75rem;
+    display: none;
+}
+
 .subscribe__form-input {
     border-radius: 0.5rem;
     border: 1px solid var(--color-grey-opacity-75);
     padding: 1rem;
+    margin: 0 0 1.25rem 0;
     font-size: 0.875rem;
+    width: 100%;
 }
+
+.subscribe__form-input--error {
+    border: 1px solid var(--color-tomato);
+    background-color: hsl(4, 100%, 95%);
+  }
 
 .subscribe__form-input::placeholder {
     color: var(--color-grey-opacity-75);
