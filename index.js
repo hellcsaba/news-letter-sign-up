@@ -13,16 +13,14 @@ subscribeForm.addEventListener("submit", (event) => {
     errorMessage.style.display = "block";
   } else {
     const subscribeSuccess = document.querySelector(".subscribe__success");
+    const subscribeEmail = document.querySelector(".subscribe__success-email");
+    subscribeEmail.textContent = emailValue;
     subscribeSuccess.classList.remove("subscribe__success--hidden");
     emailInput.classList.remove("subscribe__form-input--error");
     errorMessage.style.display = "none";
 
-    const subscribeImageContainer = document.querySelector(
-      ".subscribe__image-container"
-    );
-    const subscribeFormContainer = document.querySelector(
-      ".subscribe__form-container"
-    );
+    const subscribeImageContainer = document.querySelector(".subscribe__image-container");
+    const subscribeFormContainer = document.querySelector(".subscribe__form-container");
     subscribeFormContainer.style.display = "none";
     subscribeImageContainer.style.display = "none";
   }

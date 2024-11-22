@@ -9,13 +9,7 @@
 
     <script defer src="./index.js"></script>
 
-    <link
-      rel
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/icon-success.svg"
-    />
+    <link rel rel="icon" type="image/png" sizes="32x32" href="./assets/images/icon-success.svg" />
 
     <title>Newsletter sign-up form with success message</title>
   </head>
@@ -36,53 +30,31 @@
         </picture>
         <section class="subscribe__form-container">
           <h1 class="subscribe__title">Stay updated!</h1>
-          <p class="subscribe__description">
-            Join 60,000+ product managers receiving monthly updates on:
-          </p>
+          <p class="subscribe__description">Join 60,000+ product managers receiving monthly updates on:</p>
           <ul class="subscribe__list">
-            <li class="subscribe__list-item">
-              Product discovery and building what matters
-            </li>
-            <li class="subscribe__list-item">
-              Measuring to ensure updates are a success
-            </li>
+            <li class="subscribe__list-item">Product discovery and building what matters</li>
+            <li class="subscribe__list-item">Measuring to ensure updates are a success</li>
             <li class="subscribe__list-item">And much more!</li>
           </ul>
 
           <form class="subscribe__form">
             <div class="subscribe__form-input-group">
-              <label for="email" class="subscribe__form-label"
-                >Email address</label
-              >
-              <span class="subscribe__form-error-message"
-                >Valid email required</span
-              >
+              <label for="email" class="subscribe__form-label">Email address</label>
+              <p class="subscribe__form-error-message">Valid email required</p>
             </div>
-            <input
-              id="email"
-              type="email"
-              class="subscribe__form-input"
-              placeholder="email@company.com"
-            />
-            <button
-              type="submit"
-              class="subscribe__form-button subscribe__form-button--submit"
-            >
+            <input id="email" type="text" class="subscribe__form-input" placeholder="email@company.com" />
+            <button type="submit" class="subscribe__form-button subscribe__form-button--submit">
               Subscribe to monthly newsletter
             </button>
           </form>
         </section>
         <section class="subscribe__success subscribe__success--hidden">
-          <img
-            src="./assets/images/icon-success.svg"
-            alt="Success icon"
-            class="subscribe__success-icon"
-          />
+          <img src="./assets/images/icon-success.svg" alt="Success icon" class="subscribe__success-icon" />
           <h1 class="subscribe__success-title">Thanks for subscribing!</h1>
           <p class="subscribe__success-message">
             A confirmation email has been sent to
-            <strong>ash@loremcompany.com</strong>. Please open it and click the
-            button inside to confirm your subscription.
+            <strong class="subscribe__success-email"></strong>. Please open it and click the button inside to confirm
+            your subscription.
           </p>
           <button class="subscribe__success-dismiss">Dismiss message</button>
         </section>
